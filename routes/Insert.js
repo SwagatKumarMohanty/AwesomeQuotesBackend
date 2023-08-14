@@ -7,7 +7,7 @@ const apptoInsert=express.Router();
 const mysql=require('mysql');
 const connection=mysql.createConnection(
    {
-    host:'localhost',
+    host:'swagat-VivoBook-ASUSLaptop-X415EA-X415EA',
     database:'aws_quotes',
     password:'manager',
     user:'root'
