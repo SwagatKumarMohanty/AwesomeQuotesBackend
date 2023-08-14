@@ -7,20 +7,20 @@ const apptoInsert=express.Router();
 const mysql=require('mysql');
 const connection=mysql.createConnection(
    {
-    // host:'https://myappbackend-3co1.onrender.com',
-    // database:'aws_quotes',
-    // password:'manager',
-    // user:'root'
+    host:'localhost',
+    database:'aws_quotes',
+    password:'manager',
+    user:'root'
    }
 );
 const salt=10;
 
-apptoInsert.post("/",async (request,response)=>
+apptoInsert.post("/",(request,response)=>
 {
       
-    var pass= await bcrypt.hash(request.body.password.toString(),salt);
-    console.log(pass);
-    var query=`insert into users(first_name,last_name,email,password,mobile) values('${request.body.first_name}','${request.body.last_name}','${request.body.email}','${pass}','${request.body.mobile}')`;
+    //var pass= await bcrypt.hash(request.body.password.toString(),salt);
+    //console.log(pass);
+    var query=`insert into users(first_name,last_name,email,password,mobile) values('${request.body.first_name}','${request.body.last_name}','${request.body.email}','${request.body.password}','${request.body.mobile}')`;
      connection.query(query,(error,result)=>
      {
         if(error==null)
