@@ -4,7 +4,7 @@ const apptoaddFavouriteQuote=express.Router();
 const mysql=require('mysql');
 const connection=mysql.createConnection(
    {
-    host:'https://myappbackend-3co1.onrender.com',
+    //host:'https://myappbackend-3co1.onrender.com',
     database:'aws_quotes',
     password:'manager',
     user:'root'

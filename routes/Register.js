@@ -5,7 +5,7 @@ const apptoRegister=express.Router();
 const mysql=require('mysql');
 const connection=mysql.createConnection(
    {
-    host:'',
+    //host:'',
     database:'content_mgmt',
     password:'manager',
     user:'root'
