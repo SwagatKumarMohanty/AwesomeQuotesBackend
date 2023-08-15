@@ -7,10 +7,10 @@ const apptoInsert=express.Router();
 const mysql=require('mysql');
 const connection=mysql.createConnection(
    {
-    host:'swagat-VivoBook-ASUSLaptop-X415EA-X415EA',
-    database:'aws_quotes',
-    password:'manager',
-    user:'root'
+    host:process.env.DB_HOST,
+    database:process.env.DB_NAME,
+    password:process.env.DB_PASSWORD,
+    user:process.env.DB_USER
    }
 );
 const salt=10;
